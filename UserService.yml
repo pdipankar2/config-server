@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: UserService
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090/
+server:
+  port: 2223
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
